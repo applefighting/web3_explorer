@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useAccount } from "wagmi";
 import styles from "../styles/TokenBalancesDisplay.module.css";
 
-export default function TokenBalancesPanel({ walletAddress, chain }) {
+export default function TokenBalancesDisplay({ walletAddress, chain }) {
   const [tokensBalance, setTokensBalance] = useState();
   const [isLoading, setIsloading] = useState(false);
   const { address, isConnected, isDisconnected } = useAccount();
@@ -38,13 +38,13 @@ export default function TokenBalancesPanel({ walletAddress, chain }) {
   return (
     <div className={styles.token_panel_container}>
       <div className={styles.token_box}>
-        <h2>
+        {/* <h2>
           {isDisconnected && walletAddress?.length
             ? `${walletAddress.slice(0, 6)}...${walletAddress.contract.slice(
                 38
               )} `
             : `${propAddress?.slice(0, 6)}...${propAddress?.slice(38)}`}
-        </h2>
+        </h2> */}
         <div className={styles.tokens_container}>
           {tokensBalance?.length &&
             tokensBalance.map((token) => {
