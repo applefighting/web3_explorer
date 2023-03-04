@@ -6,4 +6,8 @@ yarn.lock
 dist
 .next
 package-lock.json
+<<<<<<< HEAD
 .env.local
+=======
+.env.local
+>>>>>>> a5d477240920dccefe1034a5e8c0c28bd60d86ec
