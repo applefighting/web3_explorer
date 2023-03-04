@@ -20,7 +20,7 @@ import TokenBalancesDisplay from "../components/tokensBalanceDisplay";
 export default function Home() {
   return (
     <>
-      <TokenBalancesDisplay address={"vitalik.eth"} chain={"ETH_MAINNET"}/>
+      <TokenBalancesDisplay address={"hashlink.eth"} chain={"ETH_MAINNET"}/>
     </>
   );
 }
