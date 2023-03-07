@@ -3,6 +3,8 @@ import styles from "../styles/NftGallery.module.css";
 import { useAccount } from "wagmi";
 import etherscan from "../public/etherscan.svg";
 import verified from "../public/verified.svg";
+import React from 'react';
+import { Tabs } from 'antd';
 
 export default function NFTGallery({}) {
 	const [nfts, setNfts] = useState();
@@ -121,7 +123,18 @@ export default function NFTGallery({}) {
 					</div>
 				</div>
 			</div>
-
+			<Tabs
+				defaultActiveKey="1"
+				centered
+				items={new Array(3).fill(null).map((_, i) => {
+					const id = String(i + 1);
+					return {
+						label: `Tab ${id}`,
+						key: id,
+						children: `Content of Tab Pane ${id}`,
+					};
+				})}
+			/>
 			{isLoading ? (
 				<div className={styles.loading_box}>
 					<p>Loading...</p>
