@@ -15,6 +15,7 @@ export default function NFTGallery({}) {
 	const { address, isConnected } = useAccount();
 	const [chain, setChain] = useState("eth-mainnet");
 	
+	
 	const changeFetchMethod = (e) => {
 		switch (e.target.value) {
 			case "wallet":
@@ -207,10 +208,10 @@ function NftCard({ nft }) {
 						) : null}
 					</div>
 					<div className={styles.contract_container}>
-						<p className={styles.contract_container}>
+						<a href={`https://etherscan.io/address/${nft.contract}`} target={"_blank"}className={styles.contract_container}>
 							{nft.contract.slice(0, 6)}...
 							{nft.contract.slice(38)}
-						</p>
+						</a>
 						<img src={etherscan.src} width="15px" height="15px" />
 					</div>
 				</div>
