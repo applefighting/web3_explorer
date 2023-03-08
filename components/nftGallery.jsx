@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
 import styles from "../styles/NftGallery.module.css";
 import { useAccount } from "wagmi";
 import etherscan from "../public/etherscan.svg";
 import verified from "../public/verified.svg";
-import React from 'react';
 import { Tabs } from 'antd';
 
 export default function NFTGallery({}) {
@@ -205,7 +204,10 @@ function NftCard({ nft }) {
 			</div>
 			<div className={styles.info_container}>
 				<div className={styles.title_container}>
+					<a href={`https://opensea.io/assets/ethereum/${nft.contract}/${nft.tokenId}`} target={"_blank"}>
 					<h3>{nft.title}</h3>
+					{/* https://opensea.io/assets/ethereum/${nft.contract}/${nft.tokenId} */}
+					</a>
 				</div>
 				<hr className={styles.separator} />
 				<div className={styles.symbol_contract_container}>
