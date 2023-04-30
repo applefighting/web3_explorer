@@ -122,10 +122,10 @@ export default function NFTGallery({}) {
 					</div>
 				</div>
 			</div>
-			<Tabs
+			{/* <Tabs
 				defaultActiveKey="1"
 				centered
-				items={new Array(3).fill(null).map((_, i) => {
+				items={new Array(2).fill(null).map((_, i) => {
 					const id = String(i + 1);
 					return {
 						label: `Tab ${id}`,
@@ -133,7 +133,7 @@ export default function NFTGallery({}) {
 						children: `Content of Tab Pane ${id}`,
 					};
 				})}
-			/>
+			/> */}
 			{isLoading ? (
 				<div className={styles.loading_box}>
 					<p>Loading...</p>
@@ -151,8 +151,8 @@ export default function NFTGallery({}) {
 										justifyContent: "end",
 									}}
 								>
-									<p>Hide spam</p>
-									<label className={styles.switch}>
+									{/* <p>Hide spam</p> */}
+									{/* <label className={styles.switch}>
 										<input
 											onChange={(e) =>
 												setSpamFilter(e.target.checked)
@@ -163,7 +163,7 @@ export default function NFTGallery({}) {
 										<span
 											className={`${styles.slider} ${styles.round}`}
 										></span>
-									</label>
+									</label> */}
 								</div>
 							)}
 
@@ -206,7 +206,6 @@ function NftCard({ nft }) {
 				<div className={styles.title_container}>
 					<a href={`https://opensea.io/assets/ethereum/${nft.contract}/${nft.tokenId}`} target={"_blank"}>
 					<h3>{nft.title}</h3>
-					{/* https://opensea.io/assets/ethereum/${nft.contract}/${nft.tokenId} */}
 					</a>
 				</div>
 				<hr className={styles.separator} />
